@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Cafeteria</title>
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+<body >
+    <!-- Página de Registro -->
+    <div  id="registro-page" class="page active">
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <h1>🍽️ CBTIS 199</h1>
+                    <img src="cafeteria.jpeg" alt="" width="200" height="200">
+                    <h2>Registro de Usuario</h2>
+                </div>
+                
+                <form id="registro-form" class="form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo:</label>
+                        <input type="text" id="nombre" name="nombre" required 
+                               placeholder="Ingresa tu nombre completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grupo">Grupo:</label><br>
+                        <select name="grupo" id="grupo">
+                        <option value="A">Grupo 1AM</option>
+        <option value="B">Grupo 1AV</option>
+        <option value="A">Grupo 1BM</option>
+        <option value="B">Grupo 1BV</option>
+        <option value="A">Grupo 1CM</option>
+        <option value="B">Grupo 1CV</option>
+        <option value="A">Grupo 1DM</option>
+        <option value="B">Grupo 1DV</option>
+        <option value="A">Grupo 1EM</option>
+        <option value="B">Grupo 1EV</option>
+        <option value="A">Grupo 1FM</option>
+        <option value="B">Grupo 1FV</option>
+        <option value="A">Grupo 3AM</option>
+        <option value="B">Grupo 3AV</option>
+        <option value="A">Grupo 3BM</option>
+        <option value="B">Grupo 3BV</option>
+        <option value="A">Grupo 3CM</option>
+        <option value="B">Grupo 3CV</option>
+        <option value="A">Grupo 3DM</option>
+        <option value="B">Grupo 3DV</option>
+        <option value="A">Grupo 3EM</option>
+        <option value="B">Grupo 3EV</option>
+        <option value="A">Grupo 3FM</option>
+        <option value="B">Grupo 3FV</option>
+        <option value="A">Grupo 5AM</option>
+        <option value="B">Grupo 5AV</option>
+        <option value="A">Grupo 5BM</option>
+        <option value="B">Grupo 5BV</option>
+        <option value="A">Grupo 5CM</option>
+        <option value="B">Grupo 5CV</option>
+        <option value="A">Grupo 5DM</option>
+        <option value="B">Grupo 5DV</option>
+        <option value="A">Grupo 5EM</option>
+        <option value="B">Grupo 5EV</option>
+        <option value="A">Grupo 5FM</option>
+        <option value="B">Grupo 5FV</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="especialidad">Especialidad:</label>
+                        <select id="especialidad" name="especialidad" required>
+                            <option value="">Selecciona una especialidad</option>
+                            <option value="Programación">Programación</option>
+                            <option value="Contabilidad">Contabilidad</option>
+                            <option value="Construccion">Construccion</option>
+                            <option value="Ofimatica">Ofimatica</option>
+                            <option value="Laboratista Clinico">Laboratista Clinico</option>
+                            <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Registrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página de Valoración -->
+    <div id="valoracion-page" class="page">
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <h1>⭐ Valoración de la Cafetería</h1>
+                    <div id="usuario-info" class="usuario-info"></div>
+                </div>
+                
+                <form id="valoracion-form" class="form">
+                    <div class="menu-valoracion">
+                        
+                        <div class="menu-item" data-item="torta">
+                            <div class="menu-name">
+                                <h3>Torta Cubana</h3>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Qué tan seguido la compras?</label>
+                                <div class="stars" data-rating="torta-frecuencia">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="torta-frecuencia" name="torta-frecuencia" value="0">
+                                <span class="rating-text" id="torta-frecuencia-text">No calificado</span>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Qué te parece su sabor y calidad?</label>
+                                <div class="stars" data-rating="torta-calidad">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="torta-calidad" name="torta-calidad" value="0">
+                                <span class="rating-text" id="torta-calidad-text">No calificado</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="tacos">
+                            <div class="menu-name">
+                                <h3>Tacos de carne</h3>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Qué tan seguido lo compras?</label>
+                                <div class="stars" data-rating="tacos-frecuencia">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="tacos-frecuencia" name="tacos-frecuencia" value="0">
+                                <span class="rating-text" id="tacos-frecuencia-text">No calificado</span>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Qué tal el sabor y tamaño?</label>
+                                <div class="stars" data-rating="tacos-calidad">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="tacos-calidad" name="tacos-calidad" value="0">
+                                <span class="rating-text" id="tacos-calidad-text">No calificado</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="ensalada">
+                            <div class="menu-name">
+                                <h3>Ensalada </h3>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Qué tan seguido la eliges?</label>
+                                <div class="stars" data-rating="ensalada-frecuencia">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="ensalada-frecuencia" name="ensalada-frecuencia" value="0">
+                                <span class="rating-text" id="ensalada-frecuencia-text">No calificado</span>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Recomendarías su sabor?</label>
+                                <div class="stars" data-rating="ensalada-calidad">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="ensalada-calidad" name="ensalada-calidad" value="0">
+                                <span class="rating-text" id="ensalada-calidad-text">No calificado</span>
+                            </div>
+                        </div>
+
+                        <div class="menu-item" data-item="chilaquiles">
+                            <div class="menu-name">
+                                <h3>Chilaquiles</h3>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Cada cuándo lo compras?</label>
+                                <div class="stars" data-rating="chilaquiles-frecuencia">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="chilaquiles-frecuencia" name="chilaquiles-frecuencia" value="0">
+                                <span class="rating-text" id="chilaquiles-frecuencia-text">No calificado</span>
+                            </div>
+                            <div class="rating-group">
+                                <label>¿Qué tal el sabor ?</label>
+                                <div class="stars" data-rating="chilaquiles-calidad">
+                                    <span class="star" data-value="1">★</span>
+                                    <span class="star" data-value="2">★</span>
+                                    <span class="star" data-value="3">★</span>
+                                    <span class="star" data-value="4">★</span>
+                                    <span class="star" data-value="5">★</span>
+                                </div>
+                                <input type="hidden" id="chilaquiles-calidad" name="chilaquiles-calidad" value="0">
+                                <span class="rating-text" id="chilaquiles-calidad-text">No calificado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Continuar</button>
+                        <button type="button" id="volver-registro" class="btn btn-secondary">Volver al Registro</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página de Servicio y Mantenimiento -->
+    <div id="servicio-page" class="page">
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <h1>🏢 Servicio y Mantenimiento</h1>
+                    <div id="usuario-info-servicio" class="usuario-info"></div>
+                </div>
+                
+                <form id="servicio-form" class="form">
+                    <div class="valoracion-section">
+                        <h3>Servicio al Cliente</h3>
+                        <div class="rating-group">
+                            <label>¿Cómo calificarías la atención y amabilidad del personal?</label>
+                            <div class="stars" data-rating="servicio-atencion">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <input type="hidden" id="servicio-atencion" name="servicio-atencion" value="0">
+                            <span class="rating-text" id="servicio-atencion-text">No calificado</span>
+                        </div>
+                    </div>
+
+                    <div class="valoracion-section">
+                        <h3>Velocidad del Servicio</h3>
+                        <div class="rating-group">
+                            <label>¿Qué tan rápido es el servicio?</label>
+                            <div class="stars" data-rating="servicio-velocidad">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <input type="hidden" id="servicio-velocidad" name="servicio-velocidad" value="0">
+                            <span class="rating-text" id="servicio-velocidad-text">No calificado</span>
+                        </div>
+                    </div>
+
+                    <div class="valoracion-section">
+                        <h3>Mantenimiento del Lugar</h3>
+                        <div class="rating-group">
+                            <label>¿Cómo está la limpieza general del lugar?</label>
+                            <div class="stars" data-rating="mantenimiento-limpieza">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <input type="hidden" id="mantenimiento-limpieza" name="mantenimiento-limpieza" value="0">
+                            <span class="rating-text" id="mantenimiento-limpieza-text">No calificado</span>
+                        </div>
+                    </div>
+
+                    <div class="valoracion-section">
+                        <h3>Estado de las Instalaciones</h3>
+                        <div class="rating-group">
+                            <label>¿Cómo está el estado de las mesas, sillas y equipos?</label>
+                            <div class="stars" data-rating="mantenimiento-instalaciones">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <input type="hidden" id="mantenimiento-instalaciones" name="mantenimiento-instalaciones" value="0">
+                            <span class="rating-text" id="mantenimiento-instalaciones-text">No calificado</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentarios-servicio">Comentarios Adicionales (Opcional):</label>
+                        <textarea id="comentarios-servicio" name="comentarios-servicio" rows="4" 
+                                  placeholder="Escribe tus comentarios sobre el servicio y mantenimiento..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Continuar</button>
+                        <button type="button" id="volver-menu" class="btn btn-secondary">Volver al Menú</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página de Reseña General -->
+    <div id="resena-page" class="page">
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <h1>✍️ Reseña General</h1>
+                    <div id="usuario-info-resena" class="usuario-info"></div>
+                </div>
+                
+                <form id="resena-form" class="form">
+                    <div class="form-group">
+                        <label for="titulo-resena">Título de tu Reseña (Opcional):</label>
+                        <input type="text" id="titulo-resena" name="titulo-resena" 
+                               placeholder="Ej: Excelente cafetería, Muy buena experiencia, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resena-texto">Escribe tu Reseña General:</label>
+                        <textarea id="resena-texto" name="resena-texto" rows="8" required
+                                  placeholder="Comparte tu experiencia general con la cafetería. ¿Qué te gustó más? ¿Qué mejorarías? ¿Recomendarías este lugar a otros estudiantes?"></textarea>
+                        <small style="color: #666; font-size: 0.9em; margin-top: 5px; display: block;">
+                            Mínimo 50 caracteres
+                        </small>
+                    </div>
+
+                    <div class="valoracion-section">
+                        <h3>Calificación General</h3>
+                        <div class="rating-group">
+                            <label>¿Cuál es tu calificación general de la cafetería?</label>
+                            <div class="stars" data-rating="calificacion-general">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <input type="hidden" id="calificacion-general" name="calificacion-general" value="0">
+                            <span class="rating-text" id="calificacion-general-text">No calificado</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                            <input type="checkbox" id="recomendar" name="recomendar" style="width: auto; cursor: pointer;">
+                            <span>¿Recomendarías esta cafetería a otros estudiantes?</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Enviar Reseña Completa</button>
+                        <button type="button" id="volver-servicio" class="btn btn-secondary">Volver Atrás</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página de Confirmación -->
+    <div id="confirmacion-page" class="page">
+        <div class="container">
+            <div class="card">
+                <div class="header">
+                    <h1>✅ ¡Gracias por tu Valoración!</h1>
+                    <p>Tu opinión es muy importante para nosotros</p>
+                </div>
+                <div class="success-message">
+                    <p>Tu valoración ha sido registrada exitosamente.</p>
+                    <button type="button" id="nueva-valoracion" class="btn btn-primary">Hacer Otra Valoración</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="proyecto.js"></script>
+</body>
+</html>
